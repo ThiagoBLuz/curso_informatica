@@ -17,6 +17,8 @@
     "mysql2": "^3.9.2"
   },
   "devDependencies": {
-    "jsdoc": "^4.0.4"
+    "jest": "^30.0.4",
+    "jsdoc": "^4.0.4",
+    "supertest": "^7.1.1"
   }
 }

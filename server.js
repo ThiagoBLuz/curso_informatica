@@ -109,6 +109,11 @@ app.get('/login', (req, res) => {
 /**
  * Inicia o servidor HTTP na porta 3000.
  */
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000/login');
-});
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000/login');
+  });
+}
+
+module.exports = { app };
+
