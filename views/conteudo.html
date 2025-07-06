@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conteúdo do Curso de Informática</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Curso de Informática Básica</h1>
+    <p>Bem-vindo(a), <span id="usuario"></span>!</p>
+  </header>
+
+  <main>
+    <section class="apresentacao">
+      <img src="/imagem/computador.jpg" alt="Computador" />
+      <div>
+        <h2>O que você vai aprender:</h2>
+        <ul>
+          <li>Introdução à Informática</li>
+          <li>Pacote Office (Word, Excel, PowerPoint)</li>
+          <li>Navegação na Internet</li>
+          <li>Redes Sociais e Comunicação</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="modulos">
+      <h2>Módulos disponíveis</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Windows</h3>
+          <p>Noções básicas do sistema operacional.</p>
+          <button>Começar</button>
+        </div>
+        <div class="card">
+          <h3>Word</h3>
+          <p>Criação e edição de documentos de texto.</p>
+          <button>Começar</button>
+        </div>
+        <div class="card">
+          <h3>Excel</h3>
+          <p>Planilhas, fórmulas e organização de dados.</p>
+          <button>Começar</button>
+        </div>
+        <div class="card">
+          <h3>Internet</h3>
+          <p>Como navegar, pesquisar e usar e-mail.</p>
+          <button>Começar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Curso de Informática para Iniciantes</p>
+  </footer>
+
+  <script>
+    fetch('/api/usuario')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('usuario').textContent = data.usuario;
+      });
+  </script>
+</body>
+</html>

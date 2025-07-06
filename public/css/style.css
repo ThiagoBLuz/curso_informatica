@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Correção para centralizar corretamente o login */
+body.login {
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-container {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(13, 71, 161, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-container label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 0.8rem 1rem;
+  border: 2px solid #0d47a1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #094080;
+  outline: none;
+}
+
+.login-container button {
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #094080;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header fixo, com texto centralizado verticalmente */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Título do curso */
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 0 0.3rem 0;
+  user-select: none;
+}
+
+/* Saudação */
+header p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+main {
+  padding: 6rem 2rem 3rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.apresentacao {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.15);
+}
+
+.apresentacao img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.apresentacao div {
+  flex: 1;
+}
+
+.apresentacao h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+  font-weight: 700;
+  user-select: none;
+}
+
+.apresentacao ul {
+  list-style: inside disc;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-size: 1.15rem;
+  user-select: none;
+}
+
+.modulos h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 coluna em celulares */
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #0d47a1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 12px 30px rgba(13, 71, 161, 0.25);
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #0d47a1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+.card p {
+  flex-grow: 1;
+  color: #555;
+  font-size: 1rem;
+  margin: 0 0 1.6rem 0;
+  user-select: none;
+  line-height: 1.4;
+}
+
+.card button {
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.card button:hover {
+  background-color: #094080;
+}
+
+footer {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 4rem;
+  font-size: 1rem;
+  user-select: none;
+  border-top: 4px solid #08306b;
+}
+
+@media (max-width: 700px) {
+  .apresentacao {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .apresentacao img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  main {
+    padding: 6rem 1rem 2rem;
+  }
+  
+  .card {
+    padding: 1.5rem 1rem;
+  }
+}
